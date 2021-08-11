@@ -75,4 +75,8 @@ LDC2019T02
 For this dataset (and this dataset only), the FreebaseTools 1.20 toolkit is used from the ISI to process the Freebase KB.   This is only used within `data/LDC2019T02.py`. The link we downloaded this from is currently unavailable,
 and we'd suggest that if intending to use LDC2019T02, use a different toolkit for accessing the KB.
 
-
+#Example commands
+To train a Wikipedia model, use the following command;
+```
+python codebase/linker.py -c config.wiki.ini --eval_every 200 --save_every 400 --language "ALL" --include_context --context_hidden_layer_size "512" --mention_hidden_layer_size "512" --hidden_layer_size "512,256"  --include_typing --type_hidden_layer_size "64" --mention_hidden_layer_size "1024" --training_ds "None"
+```
